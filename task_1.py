@@ -5,8 +5,8 @@
 # нацело только на единицу и на себя».
 
 def simple_nums():
-    for i in range(3, 100, 2):
-        for j in range(3, i):
+    for i in range(2, 100):
+        for j in range(2, i):
             if i % j == 0:
                 break
         else:
