@@ -5,17 +5,16 @@
 # нацело только на единицу и на себя».
 
 def simple_nums():
-    lst = set()
-    lst.add(2)
     for i in range(3, 100, 2):
-        for j in range (2, i):
-            if i % j != 0:
-                lst.add(i)
-    for i in lst:
-        yield i
+        for j in range(3, i):
+            if i % j == 0:
+                break
+        else:
+            yield i
 count = 0
 a = simple_nums()
 n = int(input("количество: "))
+print(a)
 while (count < n):
     print(next(a))
     count += 1
